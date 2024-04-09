@@ -8,9 +8,9 @@ sap.ui.define(['sap/fe/test/ObjectPage'], function(ObjectPage) {
 
     return new ObjectPage(
         {
-            appId: 'testprojectsap',
-            componentId: 'Interactions_ItemsObjectPage',
-            contextPath: '/Interactions_Header/ITEMS'
+            appId: 'wrkctr',
+            componentId: 'WorkCenterMainObjectPage',
+            contextPath: '/WorkCenterMain'
         },
         CustomPageDefinitions
     );

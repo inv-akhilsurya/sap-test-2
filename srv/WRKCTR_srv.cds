@@ -1,10 +1,13 @@
-using ZWORK_CENTER_SRV from './external/ZWORK_CENTER_SRV.cds';
+using app.interactions from '../db/interactions';
+using ZWORK_CENTER_SRV as ZWORK_CENTER_SRV from './external/ZWORK_CENTER_SRV.cds';
+service WRKCTRService {
+@odata.draft.enabled
+ entity WorkCenterMain
+    as projection on  interactions.WorkCenterMain;
 
-service ZWORK_CENTER_SRVSampleService {
-    @readonly
+@readonly
     entity WorkCenterETSet as projection on ZWORK_CENTER_SRV.WorkCenterETSet
-    {        key WorkCenter, key Plant     }    
-
+    {        key WorkCenter, key Plant     } 
     @readonly
     entity ActiveVersionVHSet as projection on ZWORK_CENTER_SRV.ActiveVersionVHSet
     {        key Language, key Version ,Description    } 
@@ -24,3 +27,4 @@ service ZWORK_CENTER_SRVSampleService {
     entity PlantSet as projection on ZWORK_CENTER_SRV.PlantSet
     {        key Plant,  Name1}
 }
+

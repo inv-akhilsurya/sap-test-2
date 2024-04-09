@@ -5,7 +5,7 @@
 service ZWORK_CENTER_SRV {};
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -29,7 +29,7 @@ entity ZWORK_CENTER_SRV.PlantSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -60,7 +60,7 @@ entity ZWORK_CENTER_SRV.WorkCenterCategoryVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -98,7 +98,7 @@ entity ZWORK_CENTER_SRV.CostCenterVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -129,7 +129,7 @@ entity ZWORK_CENTER_SRV.PersonResponsibleVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -160,7 +160,7 @@ entity ZWORK_CENTER_SRV.LocationVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -191,7 +191,7 @@ entity ZWORK_CENTER_SRV.UsageVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -222,7 +222,7 @@ entity ZWORK_CENTER_SRV.StandardValueKeyVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -260,7 +260,7 @@ entity ZWORK_CENTER_SRV.ControlKeyVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -291,7 +291,7 @@ entity ZWORK_CENTER_SRV.UoMTimeVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -322,7 +322,7 @@ entity ZWORK_CENTER_SRV.UoMVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -353,7 +353,7 @@ entity ZWORK_CENTER_SRV.CapacityCategoryVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -384,7 +384,7 @@ entity ZWORK_CENTER_SRV.FormulaVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -422,7 +422,7 @@ entity ZWORK_CENTER_SRV.ActivityTypeVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -446,7 +446,7 @@ entity ZWORK_CENTER_SRV.CompanyCodeVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -477,7 +477,7 @@ entity ZWORK_CENTER_SRV.CapacityResponsibleVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -508,7 +508,7 @@ entity ZWORK_CENTER_SRV.GroupingVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -539,7 +539,7 @@ entity ZWORK_CENTER_SRV.FactoryCalendarVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'
@@ -570,7 +570,7 @@ entity ZWORK_CENTER_SRV.ActiveVersionVHSet {
 };
 
 @cds.external : true
-@cds.persistence.skip : true
+
 @sap.creatable : 'false'
 @sap.updatable : 'false'
 @sap.deletable : 'false'

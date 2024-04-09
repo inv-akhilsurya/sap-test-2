@@ -1,14 +1,13 @@
 {
   "requires": {
-    "[hybrid]": {
       "db": {
         "binding": {
           "type": "cf",
           "apiEndpoint": "https://api.cf.jp10.hana.ondemand.com",
           "org": "Hirose Electric_test1",
           "space": "HRS_NEO",
-          "instance": "sapwk-test-service",
-          "key": "SharedDevKey",
+          "instance": "sapcapwk-hd1",
+          "key": "sapcapwk-hd1-key",
           "resolved": false
         },
         "kind": "hana-cloud",
@@ -31,6 +30,6 @@
           "name": "destinations"
         }
       }
-    }
+    
   }
 }
