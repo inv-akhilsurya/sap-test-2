@@ -1,0 +1,142 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "workcenter",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:feop",
+      "version": "1.13.1",
+      "toolsId": "1bee1091-489f-493f-b4b1-b20cfa47982c"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/wrkctr/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.122.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ushell": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "workcenter.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "routes": [
+        {
+          "pattern": "WorkCenterMain({key}):?query:",
+          "name": "WorkCenterMainObjectPage",
+          "target": "WorkCenterMainObjectPage"
+        }
+      ],
+      "targets": {
+        "WorkCenterMainObjectPage": {
+          "type": "Component",
+          "id": "WorkCenterMainObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/WorkCenterMain",
+              "content": {
+                "header": {
+                  "visible": false,
+                  "anchorBarVisible": false
+                },
+                "footer": {
+                  "actions": {
+                    "submit": {
+                      "press": "workcenter.ext.controller.TestSubmit.testsubmitfunc",
+                      "visible": true,
+                      "enabled": true,
+                      "text": "Submit"
+                    }
+                  }
+                },
+                "body": {
+                  "sections": {
+                    "Testgroupsection": {
+                      "subSections": {
+                        "CustomField": {
+                          "template": "workcenter.ext.fragment.CustomField",
+                          "title": "this is cutom"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "sectionLayout": "Tabs",
+              "variantManagement": "Control"
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}

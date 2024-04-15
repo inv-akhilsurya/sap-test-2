@@ -1,0 +1,48 @@
+{
+  "name": "sapcapcdstest",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/http-client": "^3.13.0",
+    "@sap-cloud-sdk/resilience": "^3.13.0",
+    "@sap/cds": "^7",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7",
+    "@sap/ux-specification": "^1.120.7"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-workcenter": "cds watch --open workcenter/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "auth": "mocked",
+      "db": {
+        "kind": "hana",
+        "pool": {
+          "max": 100,
+          "min": 10
+        }
+      },
+      "ZWORK_CENTER_SRV": {
+        "kind": "odata-v2",
+        "model": "srv/external/ZWORK_CENTER_SRV",
+        "credentials": {
+          "destination": "HQ2_990_FOR_TESTING",
+          "path": "/sap/opu/odata/sap/ZWORK_CENTER_SRV"
+        }
+      }
+    }
+  },
+  "sapux": [
+    "app/workcenter"
+  ]
+}

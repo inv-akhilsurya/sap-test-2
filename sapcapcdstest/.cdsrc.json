@@ -1,0 +1,34 @@
+{
+    "requires": {
+        "destinations": {
+            "binding": {
+                "type": "cf",
+                "apiEndpoint": "https://api.cf.jp10.hana.ondemand.com",
+                "org": "Hirose Electric_test1",
+                "space": "HRS_NEO",
+                "instance": "hrs-wf-archive-hana-cap-destination-service",
+                "key": "hrs-wf-archive-hana-cap-destination-service-key",
+                "resolved": false
+            },
+            "kind": "destinations",
+            "vcap": {
+                "name": "destinations"
+            }
+        },
+        "db": {
+            "binding": {
+              "type": "cf",
+              "apiEndpoint": "https://api.cf.jp10.hana.ondemand.com",
+              "org": "Hirose Electric_test1",
+              "space": "HRS_NEO",
+              "instance": "sapcapcdstest-hdisapcapcdsteJzir7mJcO64T0V1EXDUU3A",
+              "key": "sharedkey",
+              "resolved": false
+            },
+            "kind": "hana-cloud",
+            "vcap": {
+              "name": "db"
+            }
+          }
+    }
+}

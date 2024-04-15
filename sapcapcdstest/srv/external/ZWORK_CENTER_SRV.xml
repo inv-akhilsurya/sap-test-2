@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZWORK_CENTER_SRV" xml:lang="en" sap:schema-version="1"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+                <EntityType Name="PlantVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Plant"/>
+                    </Key>
+                    <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Name1" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Name 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="WorkCenterCategoryVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="WorkCenterCategory"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="WorkCenterCategory" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Work Center Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="CostCenterVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="COArea"/>
+                        <PropertyRef Name="CostCenter"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="COArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="CO Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="CostCenter" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Cost Center" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="PersonResponsibleVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="Responsible"/>
+                    </Key>
+                    <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Responsible" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Responsible" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="LocationVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Plant"/>
+                        <PropertyRef Name="Location"/>
+                    </Key>
+                    <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Location" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Location" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="UsageVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="Usage"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Usage" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Usage" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="UsageText" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Usage Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="StandardValueKeyVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="StdValueKey"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="StdValueKey" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Std Value Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Stdvalkeytxt" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Std val.key txt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="ControlKeyVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="Application"/>
+                        <PropertyRef Name="ControlKey"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Application" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Application" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ControlKey" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Control Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ControlKeyTxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Control Key Txt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="UoMTimeVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="Commercial"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Commercial" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Commercial" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Measunittext" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Meas. unit text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="UoMVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="Commercial"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Commercial" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Commercial" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Measunittext" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Meas. unit text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="CapacityCategoryVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="Capacitycat"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Capacitycat" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Capacity cat." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="CapacityCatName" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Capacity Cat. Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="FormulaVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="FormulaKey"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="FormulaKey" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Formula Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="ActivityTypeVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="COArea"/>
+                        <PropertyRef Name="ActivityType"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="COArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="CO Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ActivityType" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Activity Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="CompanyCodeVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="CompanyCode"/>
+                    </Key>
+                    <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Company Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="CompanyName" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Company Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="CapacityResponsibleVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="CapacityPlanner"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="CapacityPlanner" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Capacity Planner" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="GroupingVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="ShiftGrouping"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ShiftGrouping" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Shift Grouping" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="FactoryCalendarVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="FactoryCalID"/>
+                        <PropertyRef Name="Language"/>
+                    </Key>
+                    <Property Name="FactoryCalID" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Factory Cal. ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="ActiveVersionVH" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Language"/>
+                        <PropertyRef Name="Version"/>
+                    </Key>
+                    <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Version" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="WorkCenterET" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="WorkCenter"/>
+                        <PropertyRef Name="Plant"/>
+                    </Key>
+                    <Property Name="WorkCenter" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Work Center" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityContainer Name="ZWORK_CENTER_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                    <EntitySet Name="PlantSet" EntityType="ZWORK_CENTER_SRV.PlantVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="WorkCenterCategoryVHSet" EntityType="ZWORK_CENTER_SRV.WorkCenterCategoryVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="CostCenterVHSet" EntityType="ZWORK_CENTER_SRV.CostCenterVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="PersonResponsibleVHSet" EntityType="ZWORK_CENTER_SRV.PersonResponsibleVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="LocationVHSet" EntityType="ZWORK_CENTER_SRV.LocationVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="UsageVHSet" EntityType="ZWORK_CENTER_SRV.UsageVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="StandardValueKeyVHSet" EntityType="ZWORK_CENTER_SRV.StandardValueKeyVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="ControlKeyVHSet" EntityType="ZWORK_CENTER_SRV.ControlKeyVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="UoMTimeVHSet" EntityType="ZWORK_CENTER_SRV.UoMTimeVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="UoMVHSet" EntityType="ZWORK_CENTER_SRV.UoMVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="CapacityCategoryVHSet" EntityType="ZWORK_CENTER_SRV.CapacityCategoryVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="FormulaVHSet" EntityType="ZWORK_CENTER_SRV.FormulaVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="ActivityTypeVHSet" EntityType="ZWORK_CENTER_SRV.ActivityTypeVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="CompanyCodeVHSet" EntityType="ZWORK_CENTER_SRV.CompanyCodeVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="CapacityResponsibleVHSet" EntityType="ZWORK_CENTER_SRV.CapacityResponsibleVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="GroupingVHSet" EntityType="ZWORK_CENTER_SRV.GroupingVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="FactoryCalendarVHSet" EntityType="ZWORK_CENTER_SRV.FactoryCalendarVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="ActiveVersionVHSet" EntityType="ZWORK_CENTER_SRV.ActiveVersionVH" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                    <EntitySet Name="WorkCenterETSet" EntityType="ZWORK_CENTER_SRV.WorkCenterET" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                </EntityContainer>
+                <atom:link rel="self" href="https://sap-stag-007:44300/sap/opu/odata/sap/ZWORK_CENTER_SRV/$metadata"
+                    xmlns:atom="http://www.w3.org/2005/Atom"/>
+                    <atom:link rel="latest-version" href="https://sap-stag-007:44300/sap/opu/odata/sap/ZWORK_CENTER_SRV/$metadata"
+                        xmlns:atom="http://www.w3.org/2005/Atom"/>
+                    </Schema>
+                </edmx:DataServices>
+            </edmx:Edmx>
