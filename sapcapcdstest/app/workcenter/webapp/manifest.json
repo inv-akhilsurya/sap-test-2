@@ -88,6 +88,11 @@
           "pattern": "WorkCenterMain({key}):?query:",
           "name": "WorkCenterMainObjectPage",
           "target": "WorkCenterMainObjectPage"
+        },
+        {
+          "pattern": "WorkCenterMain({key})/PlantTableEntry({key2}):?query:",
+          "name": "WorkCenterMain_PlantTableEntryObjectPage",
+          "target": "WorkCenterMain_PlantTableEntryObjectPage"
         }
       ],
       "targets": {
@@ -101,8 +106,8 @@
               "contextPath": "/WorkCenterMain",
               "content": {
                 "header": {
-                  "visible": false,
-                  "anchorBarVisible": false
+                  "visible": true,
+                  "anchorBarVisible": true
                 },
                 "footer": {
                   "actions": {
@@ -113,22 +118,28 @@
                       "text": "Submit"
                     }
                   }
-                },
-                "body": {
-                  "sections": {
-                    "Testgroupsection": {
-                      "subSections": {
-                        "CustomField": {
-                          "template": "workcenter.ext.fragment.CustomField",
-                          "title": "this is cutom"
-                        }
-                      }
-                    }
-                  }
                 }
               },
-              "sectionLayout": "Tabs",
-              "variantManagement": "Control"
+              "sectionLayout": "Page",
+              "variantManagement": "Control",
+              "navigation": {
+                "PlantTableEntry": {
+                  "detail": {
+                    "route": "WorkCenterMain_PlantTableEntryObjectPage"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "WorkCenterMain_PlantTableEntryObjectPage": {
+          "type": "Component",
+          "id": "WorkCenterMain_PlantTableEntryObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "contextPath": "/WorkCenterMain/PlantTableEntry",
+              "navigation": {}
             }
           }
         }
@@ -140,3 +151,4 @@
     "archeType": "transactional"
   }
 }
+

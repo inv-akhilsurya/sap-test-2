@@ -1,5 +1,0 @@
-<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:macros="sap.fe.macros">
-	<VBox>
-		<Button core:require="{ handler: 'workcenter/ext/fragment/CustomField'}" text="CustomField" press="handler.onPress" />
-	</VBox>
-</core:FragmentDefinition>

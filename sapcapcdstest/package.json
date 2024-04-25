@@ -38,6 +38,12 @@
         "credentials": {
           "destination": "HQ2_990_FOR_TESTING",
           "path": "/sap/opu/odata/sap/ZWORK_CENTER_SRV"
+        },
+        "[production]": {
+          "credentials": {
+            "destination": "HQ2_800",
+            "path": "/sap/opu/odata/sap/ZWORK_CENTER_SRV"
+          }
         }
       }
     }
